@@ -1,36 +1,10 @@
 #container {
     margin-top: 50px;
     margin-left: 100px;
-    margin-right: 100px;
-
-    
+    margin-right: 100px;    
 }
 
-h1 {
-    background-color: darkseagreen;
-    color:#003B4A;
-    border: 1px;
-    border-color: #D6A800;
-    padding: 10px;
-}
-
-h2 {
-    background-color: darkseagreen;
-    color: #003B4A;
-    border: 1px;
-    border-color: #D6A800;
-    padding: 10px;
-}
-
-h3 {
-    background-color:darkseagreen;
-    color: #003B4A;
-    border: 1px;
-    border-color: #D6A800;
-    padding: 10px;
-}
-
-h4 {
+h1, h2, h3, h4 {
     background-color: darkseagreen;
     color:#003B4A;
     border: 1px;
