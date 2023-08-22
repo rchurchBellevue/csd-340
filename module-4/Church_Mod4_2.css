@@ -8,6 +8,10 @@ h3 {
     color:rgba(0,182,255,0.8);
 }
 
+.container  {
+
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -29,4 +33,14 @@ figcaption {
     font-style: italic;
     font-size: .75em;
     color:rgba(0,0,255,1);
+}
+
+#lastdiv {
+    width: 100%;
+    float: right;
+    margin-bottom: 10px;
+}
+#link {
+    float:right;
+    text-decoration: none;
 }
