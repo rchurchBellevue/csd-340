@@ -8,9 +8,6 @@ h3 {
     color:rgba(0,182,255,0.8);
 }
 
-.container  {
-
-}
 
 .grid-container {
     display: grid;
@@ -38,9 +35,7 @@ figcaption {
 #lastdiv {
     width: 100%;
     float: right;
-    margin-bottom: 10px;
 }
 #link {
     float:right;
-    text-decoration: none;
 }
