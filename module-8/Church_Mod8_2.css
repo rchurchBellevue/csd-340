@@ -1,3 +1,58 @@
+header {
+    background-color: #145587;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #358FD4;
+    border-bottom: solid;
+    border-color: #D49435;
+    border-width: 15px;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: yellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+#navbar a:hover {
+    background-color: #5987FF;
+    color: white;
+}
+
+#container {
+    margin: 2% 5% 100px 5%;
+}
+
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    background-color: #5987FF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding:8px;
+}
 
 #card {
     box-shadow: 0 4px 8px 0 rgba(0 0 0, 0.2);
@@ -14,4 +69,35 @@
 
 .card-content {
     padding: 2px 16px;
+}
+
+#card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #145587;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+footer p {
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    padding-right: 10px;
+    font-style: italic;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    float: right;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
