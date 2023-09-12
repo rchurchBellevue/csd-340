@@ -1,0 +1,75 @@
+<!-- Ryan Church : Assignment 9.3 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var firstVariable = "nightlight";
+        var secondVariable = "monster";
+        var thirdVariable = "crossword";
+        var fourthVariable = "nyctophobia";
+
+        function myFunction() {
+            document.getElementById("nightlight").innerHTML = "nightlight";
+        }
+
+        function myFunction2() {
+            document.getElementById("monster").innerHTML = "monster";
+        }
+
+        function myFunction3() {
+            document.getElementById("crossword").innerHTML = "crossword";
+        }
+
+        function myFunction4() {
+            document.getElementById("nyctophobia").innerHTML = "nyctophobia";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Afraid of the Dark</h2>
+        <p>
+            When I was a young child, I had typically slept in the same room as my older brother, so I never had any
+            issues with being scared of the dark.
+            However, he soon moved to his own room, and that's when the trouble started. For some reason, I was now very
+            uneasy with the lights off, so
+            this led to me getting a <span id="nightlight">____</span>.
+        </p>
+        <p>
+            One night I had a very vivid nightmare where I was staring at the closet and the door slowly opened. A large
+            <span id="monster">____</span> crawled out of the closet
+            and waved at me, causing me to wake up with a start and being covered in sweat. From then on, I could not go
+            to bed without opening the closet door to
+            make sure nothing was inside.
+        </p>
+        <p>
+            As I grew older I continued to have problems so my mom would sit outside in the hallway and work on <span
+                id="crossword">____</span> puzzles to pass the time until I fell asleep.
+            Little did I know this would lead to me becoming interested in what crossword puzzles were and starting to
+            do some on my own. Overtime it became
+            a great bonding activity for my mom and me to work one together.
+        </p>
+        <p>
+            I guess eventually my being afraid of the dark went away. I don't know if it was the presence of my mom
+            being outside, the nightmare becoming less vivid in my mind, or
+            a part of just getting older. It's interesting to see how childhood fears go away. And in case you were
+            curious for the phobia of being scared of the dark, it's
+            <span id="nyctophobia">____</span>.
+        </p>
+
+        <p>
+            <button type="button" onclick="myFunction()">nightlight</button> <br> <br>
+            <button type="button" onclick="myFunction2()">monster</button> <br> <br>
+            <button type="button" onclick="myFunction3()">crossword</button> <br> <br>
+            <button type="button" onclick="myFunction4()">nyctophobia</button> <br> <br>
+        </p>
+
+    </div>
+</body>
+
+</html>
