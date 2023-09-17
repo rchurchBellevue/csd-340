@@ -1,0 +1,77 @@
+<!-- Ryan Church : Assignment 10.3 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        let caveImageLight = "images/cave_01.jpg";
+        let caveImageDark = "images/cave_02.jpg";
+        let moonNight = "images/moon_01.jpg";
+        let moonDay = "images/moon_02.jpg";
+
+        function caveFunction() {
+            let currImage = document.getElementById("caveImage").getAttribute('src');
+
+            if (currImage == "images/cave_01.jpg") {
+                caveFunctionDark();
+            }
+            else {
+                caveFunctionLight();
+            }
+        }
+
+        function caveFunctionLight() {
+            document.getElementById("caveImage").src = caveImageLight;
+            document.getElementById("caveText").innerHTML = "That's better, click again to turn off the lights";
+        }
+
+        function caveFunctionDark() {
+            document.getElementById("caveImage").src = caveImageDark;
+            document.getElementById("caveText").innerHTML = "This cave is a little too dark, click on the image to turn on the lights";
+        }
+
+        function moonFunction() {
+            let currImage2 = document.getElementById("moonImage").getAttribute('src');
+            if (currImage2 == "images/moon_01.jpg") {
+                moonFunctionDay();
+            }
+            else {
+                moonFunctionNight();
+            }
+        }
+
+
+        function moonFunctionDay() {
+            document.getElementById("moonImage").src = moonDay;
+            document.getElementById("moonText").innerHTML = "It's a little too hard to see the moon right now, click to wait until night";
+
+        }
+
+        function moonFunctionNight() {
+            document.getElementById("moonImage").src = moonNight;
+            document.getElementById("moonText").innerHTML = "Great view, click again to view the daytime view";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+        <h4 id="caveText">This cave is a little too dark, click on the image to turn on the lights</h4>
+        <img id="caveImage" src="images/cave_02.jpg" onclick="caveFunction()" alt="Cave Image">
+
+
+        <br><br><br>
+        <h4 id="moonText">The moon is a little too tough to see, click to wait until nightfall</h4>
+        <img id="moonImage" src="images/moon_02.jpg" onclick="moonFunction()" alt="Moon Image">
+
+
+
+    </div>
+</body>
+
+</html>
