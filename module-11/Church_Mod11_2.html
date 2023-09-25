@@ -4,9 +4,71 @@
 
 <head>
     <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        //declaring initial task array
+        var tasks=[];
+
+        function addTask() {
+            //get value of textbox
+            let newTask= document.getElementById("taskToAdd").value;
+            //Add task at last position
+            tasks[tasks.length]=newTask;
+            //As we'll be displaying items as 1,2,3, we'll use length as opposed to length-1
+            window.alert("Task "+newTask+ " was added at position "+tasks.length);
+
+        }
+
+        function displayTasks() {
+            //get reference to our empty list
+            let orderedlist=document.getElementById("taskList"); 
+                
+            //clear out any existing items if display has already been clicked
+            while (orderedlist.firstChild) {
+                orderedlist.removeChild(orderedlist.firstChild);
+            }
+            
+            //iterate through list items creating a new list item for each one
+            for (i = 0; i < tasks.length; ++i) {
+            let li=document.createElement("li");
+            //use i+1 to handle counting from 1 instead of zero
+            li.innerText = "Task "+(i+1)+" "+tasks[i];
+            //append to list
+            orderedlist.appendChild(li);
+         }
+            
+        }
+
+        function removeTask(){
+
+            //use pop to remove last item
+            tasks.pop();
+
+        }
+
+    </script>
 </head>
 
 <body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <h3>This is an interactive to-do list.</h3>
+        <ul>
+            <li>Fill out the text box and click "Add" to add a task.</li>
+            <li>Click display to see the list of tasks</li>
+            <li>Click delete last entry to remove the last item from the to-do list</li>
+        </ul>
+
+        
+    <form>
+        <label for="taskToAdd">Task:</label>
+        <input type="text" id="taskToAdd" name="taskToAdd"><br><br>
+        <button type="button" onclick="addTask()">Add</button> 
+        <button type="button" onclick="removeTask()">Delete Last Entry</button> 
+        <button type="button" onclick="displayTasks()">Display</button> 
+    </form>
+
+    <hr>
+    <ul id="taskList" style="list-style-type: none"></ul>
 
 </body>
 
