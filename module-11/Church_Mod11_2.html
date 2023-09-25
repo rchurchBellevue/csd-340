@@ -13,6 +13,7 @@
             let newTask= document.getElementById("taskToAdd").value;
             //Add task at last position
             tasks[tasks.length]=newTask;
+            document.getElementById('taskToAdd').value="";
             //As we'll be displaying items as 1,2,3, we'll use length as opposed to length-1
             window.alert("Task "+newTask+ " was added at position "+tasks.length);
 
