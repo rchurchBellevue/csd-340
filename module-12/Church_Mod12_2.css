@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+
+#leftdiv {
+    width:45%;
+    float: left;
+    border-width: 1px;
+    border-style:solid;
+    border-color: red;
+    border-radius: 15px;    
+}
+
+#rightdiv {
+    width:45%;
+    float: right;
+    border-width: 1px;
+    border-style:dashed;
+    border-color: red;
+    border-radius: 15px;  
+    
+}
+
+ol{
+    font-weight: 300;
+    padding: 10px;
+    list-style-position: inside;
+   
+}
+ul{
+    font-weight: 300;
+    padding:10px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+
+#lastdiv {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+#link {
+    float:right;
+    text-decoration: none;
+}
+
+#link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,109 @@
+<!-- Ryan Church : Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <!-- Link to CSS -->
+    <link href="Church_Mod12_2.css" type="text/css" rel="stylesheet">
+
+    <script>
+       
+
+        //Array of top books
+        var topBooks=[
+            "The Great Gatsby by F Scott Fitzgerald",
+            "East of Eden by John Steinbeck",
+            "Dandelion Wine by Ray Bradbury",
+            "The Martian Chronicles by Ray Bradbury",
+            "Prelude to Foundation by Isaac Asimov",
+            "The End of Eternity by Isaac Asimov",
+            "We Have Always Lived in the Castle by Shirley Jackson",
+            "I Robot by Isaac Asimov",
+            "Dracula by Bram Stoker",
+            "Nothing to See Here by Kevin Wilson"
+        ];
+
+        //this function will display the books from top to bottom
+        function displayDesc() {
+            clearlist();
+             //get reference to our empty list
+            let bookList=document.getElementById("booklist"); 
+            //iterate through books creating a new list item for each one
+            for (i = 0; i < topBooks.length; ++i) {
+                
+            let li=document.createElement("li");
+            //use i+1 to handle counting from 1 instead of zero
+            li.innerText = (i+1)+".  "+topBooks[i];
+            //append to list
+            bookList.appendChild(li);
+         }
+        }
+
+        //This function will sort the books from bottom to top
+        function displayAsc() {
+            clearlist();
+             //get reference to our empty list
+            let bookList=document.getElementById("booklist"); 
+            //iterate through books creating a new list item for each one
+            for (i = 9; i >=0; --i) {
+            let li=document.createElement("li");
+            //use i+1 to handle counting from 1 instead of zero
+            li.innerText = (i+1)+".  "+topBooks[i];
+            //append to list
+            bookList.appendChild(li);
+         }
+        }
+
+        //this function will clear out the list before writing it again
+        function clearlist(){
+             //get reference to our empty list
+            let bookList=document.getElementById("booklist"); 
+            //clear out any existing items if a button has already been clicked
+            while (bookList.firstChild) {
+                bookList.removeChild(bookList.firstChild);
+            }
+                
+        }
+        
+        
+    </script>
+
+</head>
+
+<body onload="displayDesc()">
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4 </h1>
+        
+        <div id="leftdiv">
+            <h3>My Top 10 Favorite Books</h3>
+            <hr>
+            <form>
+            <button type="button" onclick="displayDesc()">Top to Bottom</button> 
+            <button type="button" onclick="displayAsc()">Bottom to Top</button> 
+            </form>
+            <ol id="booklist" style="list-style-type: none">
+                
+            </ol>
+        </div>
+
+        <div id="rightdiv">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>CSS is not as complicated as I thought it would be</li>
+                <li>Class and id tags are a coder's best friend</li>
+                <li>Closing tags are important to remember</li>
+                <li>HTML validator tools can catch errors</li>
+                <li>CSS can customize practically anything</li>
+            </ul>
+        </div>
+    
+        <div id="lastdiv">
+             <a href="../index.html" id="link">Back to Landing Page</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
